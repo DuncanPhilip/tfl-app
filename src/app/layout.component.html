@@ -1,0 +1,34 @@
+<div class="flex h-screen w-screen gap-0">
+  <!-- Left Panel -->
+  <div
+    class="border-r border-gray-300 bg-gray-50 overflow-hidden"
+    [style.width.px]="leftPanelWidth()"
+  >
+    <app-left-panel></app-left-panel>
+  </div>
+
+  <!-- Left Splitter -->
+  <div
+    class="w-1 bg-gray-300 hover:bg-blue-500 cursor-col-resize transition-colors"
+    (mousedown)="onLeftSplitterDown($event)"
+  ></div>
+
+  <!-- Center Map -->
+  <div class="flex-1 overflow-hidden border-r border-gray-300">
+    <app-map></app-map>
+  </div>
+
+  <!-- Right Splitter -->
+  <div
+    class="w-1 bg-gray-300 hover:bg-blue-500 cursor-col-resize transition-colors"
+    (mousedown)="onRightSplitterDown($event)"
+  ></div>
+
+  <!-- Right Panel -->
+  <div
+    class="border-l border-gray-300 bg-gray-50 overflow-hidden"
+    [style.width.px]="rightPanelWidth()"
+  >
+    <app-right-panel></app-right-panel>
+  </div>
+</div>

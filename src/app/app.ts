@@ -1,12 +1,11 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { LayoutComponent } from './layout.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [LayoutComponent],
+  standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
-export class App {
-  protected readonly title = signal('tfl-app');
-}
+export class App {}
