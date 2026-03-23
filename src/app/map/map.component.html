@@ -1,1 +1,8 @@
-<div #mapContainer class="w-full h-full"></div>
+<div #mapContainer class="w-full h-full relative">
+  <button
+    class="locate-btn"
+    (click)="centerOnUserLocation()"
+    title="Center on my location">
+    📍
+  </button>
+</div>
