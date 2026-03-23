@@ -1,9 +1,9 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { LayoutComponent } from './layout.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [LayoutComponent],
+  imports: [RouterModule],
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.html',
