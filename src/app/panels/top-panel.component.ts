@@ -1,10 +1,10 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-left-panel',
+  selector: 'app-top-panel',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  templateUrl: './left-panel.component.html',
-  styleUrl: './left-panel.component.css',
+  templateUrl: './top-panel.component.html',
+  styleUrl: './top-panel.component.css',
 })
-export class LeftPanelComponent {}
+export class TopPanelComponent {}
