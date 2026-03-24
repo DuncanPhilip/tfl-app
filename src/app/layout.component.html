@@ -1,34 +1,16 @@
-<div class="flex h-screen w-screen gap-0">
-  <!-- Left Panel -->
-  <div
-    class="border-r border-gray-300 bg-gray-50 overflow-hidden"
-    [style.width.px]="leftPanelWidth()"
-  >
+<div class="flex h-screen w-screen flex-col">
+  <!-- Top toolbar (was left panel) -->
+  <div class="h-14 border-b border-gray-300 bg-gray-100 overflow-hidden">
     <app-left-panel></app-left-panel>
   </div>
 
-  <!-- Left Splitter -->
-  <div
-    class="w-1 bg-gray-300 hover:bg-blue-500 cursor-col-resize transition-colors"
-    (mousedown)="onLeftSplitterDown($event)"
-  ></div>
-
-  <!-- Center Map -->
-  <div class="flex-1 overflow-hidden border-r border-gray-300">
+  <!-- Map pane -->
+  <div class="flex-1 overflow-hidden">
     <app-map></app-map>
   </div>
 
-  <!-- Right Splitter -->
-  <div
-    class="w-1 bg-gray-300 hover:bg-blue-500 cursor-col-resize transition-colors"
-    (mousedown)="onRightSplitterDown($event)"
-  ></div>
-
-  <!-- Right Panel -->
-  <div
-    class="border-l border-gray-300 bg-gray-50 overflow-hidden"
-    [style.width.px]="rightPanelWidth()"
-  >
+  <!-- Bottom large panel (was right panel) -->
+  <div class="h-72 border-t border-gray-300 bg-gray-50 overflow-auto">
     <app-right-panel></app-right-panel>
   </div>
 </div>
