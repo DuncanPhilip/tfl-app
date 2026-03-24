@@ -42,10 +42,11 @@ export class MapComponent implements AfterViewInit {
       maxZoom: 19,
     }).addTo(this.map);
 
-    // Add a marker as example
-    L.marker([51.5, -0.09])
-      .bindPopup('A sample marker')
-      .addTo(this.map);
+    // Invalidate size after map initialization to ensure it fills the container
+    // This fixes issues with flex layouts and split panes
+    setTimeout(() => {
+      this.map.invalidateSize();
+    }, 100);
   }
 
   centerOnUserLocation(): void {

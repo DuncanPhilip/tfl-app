@@ -4,13 +4,16 @@
     <app-top-panel></app-top-panel>
   </div>
 
-  <!-- Map pane -->
-  <div class="flex-1 overflow-hidden">
-    <app-map></app-map>
-  </div>
+  <!-- Resizable split: map and bottom panel -->
+  <as-split direction="vertical" class="flex-1">
+    <!-- Map pane -->
+    <as-split-area [size]="70" class="overflow-hidden">
+      <app-map></app-map>
+    </as-split-area>
 
-  <!-- Bottom large panel -->
-  <div class="h-72 border-t border-gray-300 bg-gray-50 overflow-auto">
-    <app-bottom-panel></app-bottom-panel>
-  </div>
+    <!-- Bottom large panel -->
+    <as-split-area [size]="30" class="overflow-auto">
+      <app-bottom-panel></app-bottom-panel>
+    </as-split-area>
+  </as-split>
 </div>
